@@ -4,6 +4,9 @@ const Community = () => {
     return (
         <>
             <h1>Community page</h1>
+            <h1>Community page</h1>
+            <h1>Community page</h1>
+            <h1>Community page</h1>
         </>
     );
 };

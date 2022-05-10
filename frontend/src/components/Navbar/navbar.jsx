@@ -1,34 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import { NavLink as Link } from "react-router-dom";
 import styled from 'styled-components'
 import logo from '../../images/logo.png';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
 const Navbar = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <>
       <Nav>
-        <div className="pages">
-          <NavLink to="/" activeStyle className="logo">
-            <img src={logo} />
-          </NavLink>
-          <NavLink to="/library" activeStyle className="pages_container">
-            <h1>Library</h1>
-          </NavLink>
-          <NavLink to="/chat" activeStyle className="pages_container">
-            <h1>Chat</h1>
-          </NavLink>
-          <NavLink to="/community" activeStyle className="pages_container">
-            <h1>Community</h1>
-          </NavLink>
+        <div className="logopages_container">
+          <div className="logo">
+            <NavLink exact to="/">
+              <img src={logo} alt="Logo" />
+            </NavLink>
+          </div>
+          <div className="pages">
+            <NavLink to="/library">
+              <h1>Library</h1>
+            </NavLink>
+            <NavLink to="/community">
+              <h1>Community</h1>
+            </NavLink>
+            <NavLink to="/chat">
+              <h1>Chat</h1>
+            </NavLink>
+          </div>
         </div>
         <div className="register">
-          <NavLink to="/signin" activeStyle className="register_container">
+          <NavLink to="/signin">
             <h1>Sign In</h1>
           </NavLink>
-          <NavLink to="/signup" activeStyle>
-            <button type="button">Sign Up</button>
+          <NavLink to="/signup">
+            <button>Sign Up</button>
           </NavLink>
+        </div>
+
+        <div className="responsive">
+          {toggleMenu
+            ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
+            : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
+          {toggleMenu && (
+            <div className="responsive_container scale-up-center">
+              <div className="pagesResponsive">
+                <NavLink to="/library">
+                  <h1>Library</h1>
+                </NavLink>
+                <NavLink to="/community">
+                  <h1>Community</h1>
+                </NavLink>
+                <NavLink to="/chat">
+                  <h1>Chat</h1>
+                </NavLink>
+              </div>
+              <div className="registerResponsive">
+                <NavLink to="/signin">
+                  <h1>Sign In</h1>
+                </NavLink>
+                <NavLink to="/signup">
+                  <button>Sign Up</button>
+                </NavLink>
+              </div>
+            </div>
+          )}
         </div>
       </Nav>
     </>

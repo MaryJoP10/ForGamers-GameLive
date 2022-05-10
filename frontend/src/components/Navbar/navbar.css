@@ -1,14 +1,8 @@
-.pages{
+.logopages_container{
     flex: 1;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-right: 5px;
-}
-
-.pages_container{
-    display: flex;
-    flex-direction: row;
 }
 
 .logo{
@@ -17,6 +11,11 @@
 
 .logo img{
     width: 400px;
+}
+
+.pages{
+    display: flex;
+    flex-direction: row;
 }
 
 .register{
@@ -35,28 +34,37 @@
     text-transform: capitalize;
     margin: 25px 25px;
     cursor: pointer;
-
     display: inline-block;
     position: relative;
-
 }
 
-.pages_container h1,
-.pages_container h1::after,
-.pages_container h1::before,
-.register_container h1,
-.register_container h1::after,
-.register_container h1::before{
+.pages h1,
+.pages h1::after,
+.pages h1::before,
+.register h1,
+.register h1::after,
+.register h1::before,
+.pagesResponsive h1,
+.pagesResponsive h1::after,
+.pagesResponsive h1::before,
+.registerResponsive h1,
+.registerResponsive h1::after,
+.registerResponsive h1::before{
     transition: all .5s;
 }
 
-.pages_container h1
-.register_container h1{
+.pagesResponsive h1:hover,
+.registerResponsive h1:hover{
+    color: #702632;
+}
+
+.pages h1
+.register h1{
     position: relative;
 }
 
-.pages_container h1::after,
-.register_container h1::after{
+.pages h1::after,
+.register h1::after{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -65,12 +73,12 @@
     width: 0%;
     content: '.';
     color: transparent;
-    background: #fff;
+    background: #702632;
     height: 2px;
 }
 
-.pages_container h1:hover::after,
-.register_container h1:hover::after{
+.pages h1:hover::after,
+.register h1:hover::after{
     width: 100%;
 }
 
@@ -88,6 +96,96 @@
     margin-right: 25px;
 }
 
-.register button:hover{
+.responsive_container button{
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #702632;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.register button:hover,
+.responsive_container button:hover{
     border-color: white;
+    transition: all .5s;
+}
+
+/*Responsive*/
+.responsive{
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+}
+
+.responsive svg{
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.responsive_container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: end;
+    background: black;
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+}
+
+.responsive_container h1{
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.registerResponsive{
+    display: none;
+}
+
+@media screen and (max-width: 1050px){
+    .pages{
+        display: none;
+    }
+
+    .responsive{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 750px){
+    Nav{
+        padding: 0;
+    }
+    
+    .register{
+        display: none;
+    }
+
+    .registerResponsive{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 550px){
+    Nav{
+        padding: 0;
+    }
 }

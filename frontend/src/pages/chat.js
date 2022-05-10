@@ -4,6 +4,9 @@ const Chat = () => {
     return (
         <>
             <h1>Chat page</h1>
+            <h1>Chat page</h1>
+            <h1>Chat page</h1>
+            <h1>Chat page</h1>
         </>
     )
 }

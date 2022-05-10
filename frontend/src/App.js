@@ -10,18 +10,21 @@ import SignUp from "./pages/signup";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
+    <div className="app">
+    <Router basename='/'>
+      <Navbar/>
       <Routes>
-        <Route path="/" exact component={Home}/>
-        <Route path="/library" component={Library}/>
-        <Route path="/chat" component={Chat}/>
-        <Route path="/community" component={Community}/>
-        <Route path="/signin" component={SignIn}/>
-        <Route path="/signup" component={SignUp}/>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/library" element={<Library/>} />
+        <Route path="/chat" element={<Chat/>} />
+        <Route path="/community" element={<Community/>} />
+        <Route path="/signin" element={<SignIn/>} />
+        <Route path="/signup" element={<SignUp/>} />
       </Routes>
     </Router>
+    </div>
   );
 }
+
 
 export default App;
