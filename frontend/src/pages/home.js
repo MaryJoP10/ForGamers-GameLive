@@ -18,7 +18,9 @@ const Home = () => {
                     <img src={game} />
                 </div>
             </div>
-
+            <div>
+                
+            </div>
             <div className="whatsapp" >
                 <a href="https://api.whatsapp.com/send?phone=573053521012" target="_blank">
                     <img src={wpp} alt=""/>

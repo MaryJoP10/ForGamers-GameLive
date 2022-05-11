@@ -79,10 +79,11 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: sticky;
     width: 100%;
     top: 0;
-    left: 0;`
+    left: 0;
+    z-index: 2;`
 
 
 export const NavLink = styled(Link)`
