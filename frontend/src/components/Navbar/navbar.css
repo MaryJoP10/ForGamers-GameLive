@@ -43,13 +43,7 @@
 .pages h1::before,
 .register h1,
 .register h1::after,
-.register h1::before,
-.pagesResponsive h1,
-.pagesResponsive h1::after,
-.pagesResponsive h1::before,
-.registerResponsive h1,
-.registerResponsive h1::after,
-.registerResponsive h1::before{
+.register h1::before{
     transition: all .5s;
 }
 
@@ -187,5 +181,11 @@
 @media screen and (max-width: 550px){
     Nav{
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .logo img{
+        width: 200px;
     }
 }
