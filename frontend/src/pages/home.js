@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/home.css';
 import game from '../images/gameover.png';
-import {RiArrowDropDownLine} from 'react-icons/ri';
+import wpp from '../images/wpp.png';
 
 const Home = () => {
     return (
@@ -17,6 +17,12 @@ const Home = () => {
                 <div className="header_image">
                     <img src={game} />
                 </div>
+            </div>
+
+            <div className="whatsapp" >
+                <a href="https://api.whatsapp.com/send?phone=573053521012" target="_blank">
+                    <img src={wpp} alt=""/>
+                </a>
             </div>
         </>
     );
