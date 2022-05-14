@@ -19,7 +19,6 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                
             </div>
             <div className="whatsapp" >
                 <a href="https://api.whatsapp.com/send?phone=573053521012" target="_blank">
