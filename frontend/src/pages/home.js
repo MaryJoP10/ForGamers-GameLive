@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/home.css';
 import game from '../images/gameover.png';
 import wpp from '../images/wpp.png';
-import Slider from "../components/Slide/slide";
 import img1 from "../images/img1.jpg";
 import img2 from "../images/img2.jpg";
 import img3 from "../images/img3.jpg";
