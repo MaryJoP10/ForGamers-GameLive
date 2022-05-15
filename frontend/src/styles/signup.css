@@ -1,9 +1,101 @@
-/*------------------------WhatsApp--------------------------*/
-.whatsapp {
-    display:block;
-    width:70px;
-    height:70px;
-    position: fixed;
-    right:20px;
-    bottom:20px;
+.signup_page{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.signup_container{
+  background: hsl(350, 49%, 50%);
+  padding: 40px 0;
+  box-shadow: 0 0 20px;
+  border-radius: 20px;
+  height: 500px;
+  width: 400px;
+  margin: 10%;
+  margin-top: 20px;
+  margin-right: 10%;
+}
+
+form{
+  width: 100%;
+  margin: auto;
+}
+
+.label{
+  margin-top: 45px;
+  margin-left: 20px;
+  position: relative;
+}
+
+input{
+  background: none;
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+input:focus{
+  outline: none;
+  color: white;
+}
+
+label{
+  color: rgb(255, 255, 255, 50%);
+  font-family: var(--font-family);
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+
+h1{
+  color: #fff;
+  text-align: center;
+}
+
+input:focus~label,
+input:valid~label{
+  top: -14px;
+  font-size: 12px;
+  color: rgb(255, 255, 255, 70%);
+}
+
+.label button{
+  font-family: var(--font-family);
+  margin-top: 30px;
+  border-radius: 20px;
+  border-color: #702632;
+  display: block;
+  width: 30%;
+  margin: 60px 30%;
+  background-color: #702632;
+  color: #fff;
+  font-size: 16px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.label button:hover{
+  border-color: #fff;
+  transition: all 0.5s;
+}
+
+.signup_page img{
+  width: 50%;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 800px){
+  .signup_page img{
+    display: none;
   }
+}

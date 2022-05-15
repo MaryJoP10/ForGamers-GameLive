@@ -14,7 +14,7 @@ function App() {
     <div className="app">
     <Router basename='/'>
       <Navbar/>
-      <Footer/>
+      
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/library" element={<Library/>} />
@@ -23,11 +23,9 @@ function App() {
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
       </Routes>
-      
+      <Footer/>
     </Router>
-    
     </div>
-    
   );
 }
 
