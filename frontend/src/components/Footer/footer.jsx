@@ -14,7 +14,7 @@ const Footer = () => {
                         <div className='column'>
                             <h2>About Us</h2>
                             <p>María José Peña Ruiz</p>
-                            <p><a href="mailto:maria.penaruiz@upb.edu.co" target="_blank">maria.penaruiz@upb.edu.co</a></p>
+                            <p><a href="mailto:maria.penaruiz@upb.edu.co">maria.penaruiz@upb.edu.co</a></p>
                         </div>
                         <div className='column'>
                             <a className='icons' href="https://github.com/MaryJoP10">

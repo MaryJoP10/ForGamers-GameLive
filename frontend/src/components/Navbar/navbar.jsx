@@ -25,6 +25,9 @@ const Navbar = () => {
             <NavLink to="/chat">
               <h1>Chat</h1>
             </NavLink>
+            <NavLink to="/api">
+              <h1>API</h1>
+            </NavLink>
           </div>
         </div>
         <div className="register">
@@ -60,6 +63,9 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink to="/chat">
                   <h1>Chat</h1>
+                </NavLink>
+                <NavLink to="/api">
+                  <h1>API</h1>
                 </NavLink>
               </div>
               <div className="registerResponsive">

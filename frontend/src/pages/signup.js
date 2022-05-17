@@ -7,15 +7,9 @@ function Signup() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [flag, setFlag] = useState(false);
 
     function handleFormSubmit(e) {
         e.preventDefault();
-
-        if (!username || !email || !password) {
-            setFlag(true);
-        } else {
-            setFlag(false);
             localStorage.setItem("username", JSON.stringify(username));
             localStorage.setItem("email", JSON.stringify(email));
             localStorage.setItem("password", JSON.stringify(password));
@@ -23,13 +17,12 @@ function Signup() {
             setUsername("");
             setEmail("");
             setPassword("");
-            }
     }
 
     return (
         <>
             <div className='signup_page'>
-                <img src={COD} />
+                <img src={COD} alt="COD"/>
                 <div className="signup_container">
                     {" "}
                         <form onSubmit={handleFormSubmit}>
@@ -55,7 +48,7 @@ function Signup() {
             </div>
 
             <div className="whatsapp" >
-                <a href="https://api.whatsapp.com/send?phone=573053521012" target="_blank">
+                <a href="https://api.whatsapp.com/send?phone=573053521012">
                     <img src={wpp} alt="" />
                 </a>
             </div>

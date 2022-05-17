@@ -7,8 +7,6 @@ function Signin() {
     const [usernamelog, setUsernamelog] = useState("");
     const [passwordlog, setPasswordlog] = useState("");
 
-    const [flag, setFlag] = useState(false);
-
     function handleLogin(e) {
         e.preventDefault();
         let pass = localStorage
@@ -18,13 +16,10 @@ function Signin() {
 
 
         if (!usernamelog || !passwordlog) {
-            setFlag(true);
             alert("Enter your username and password to login");
         } else if (passwordlog !== pass || usernamelog !== user) {
-            setFlag(true);
             alert("Wrong password or username")
         } else {
-            setFlag(false);
             alert("Successful Login")
             setUsernamelog("");
             setPasswordlog("");
@@ -33,7 +28,7 @@ function Signin() {
     return (
         <>
             <div className='signin_page'>
-                <img src={crash} />
+                <img src={crash} className="img-fluid" alt="crash"/>
                 <div className="signin_container" >
                         <form onSubmit={handleLogin}>
                             <h1>Sign In</h1>
@@ -53,7 +48,7 @@ function Signin() {
             </div>
 
             <div className="whatsapp" >
-                <a href="https://api.whatsapp.com/send?phone=573053521012" target="_blank">
+                <a href="https://api.whatsapp.com/send?phone=573053521012">
                     <img src={wpp} alt="" />
                 </a>
             </div>

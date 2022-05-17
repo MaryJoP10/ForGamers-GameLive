@@ -1,0 +1,28 @@
+.pokemon_container{
+    margin-top: 3%;
+}
+
+.pokemon_container h1{
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.containerAPI_buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.containerAPI_buttons button{
+    margin: 10px;
+    width: 100px;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    border-color: #702632;
+    border-radius: 10px;
+    background-color: #702632;
+    color: white;
+}
+
+.containerAPI_buttons button:hover{
+    border-color: white;
+}

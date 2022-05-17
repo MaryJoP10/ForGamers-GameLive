@@ -12,6 +12,7 @@
   height: 450px;
   width: 400px;
   margin: 10%;
+  margin-left: 15%;
   margin-top: 20px;
   margin-right: 10%;
 }
@@ -88,8 +89,8 @@ input:valid~label{
 }
 
 .signin_page img{
-  width: 45%;
-  margin-left: 20px;
+  width: 30%;
+  margin-left: 15%;
   margin-top: 40px;
 }
 

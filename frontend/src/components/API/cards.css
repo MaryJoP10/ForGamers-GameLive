@@ -1,0 +1,50 @@
+.randomcard_container{
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.card_container{
+    box-shadow: 1px 1px 5px #40434E;
+    margin: 10px;
+}
+
+.card_container h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card_header{
+    background-color: hsl(350, 49%, 70%);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.card_body{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.card_footer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: center;
+    background-color: hsl(350, 49%, 90%);
+    padding-top: 10px;
+}
+
+.cards{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}

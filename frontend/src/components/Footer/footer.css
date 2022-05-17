@@ -10,7 +10,7 @@
     text-align: center;
     color: #fff;
     margin-top: -50px;
-    font-family: var(--font-family);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .columns_container{
@@ -37,7 +37,7 @@
 
 .column h2{
     color: #fff;
-    font-family: var(--font-family);
+    font-family:'Times New Roman', Times, serif;
 }
 
 .column p{

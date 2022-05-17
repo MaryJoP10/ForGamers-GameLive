@@ -27,7 +27,7 @@
 .pages h1,
 .register h1{
     color: #fff;
-    font-family: var(--font-family);
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
@@ -80,7 +80,7 @@
     padding: 0.5rem 1rem;
     color: #fff;
     background: #702632;
-    font-family: var(--font-family);
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
@@ -94,7 +94,7 @@
     padding: 0.5rem 1rem;
     color: #fff;
     background: #702632;
-    font-family: var(--font-family);
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
@@ -140,7 +140,7 @@
 
 .responsive_container h1{
     color: #fff;
-    font-family: var(--font-family);
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;

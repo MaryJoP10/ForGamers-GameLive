@@ -7,6 +7,7 @@ import Chat from "./pages/chat";
 import Community from "./pages/community";
 import SignIn from "./pages/signin";
 import SignUp from "./pages/signup";
+import API from "./pages/API";
 import Footer from "./components/Footer/footer";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/community" element={<Community/>} />
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
+        <Route path="/api" element={<API/>} />
       </Routes>
       <Footer/>
     </Router>

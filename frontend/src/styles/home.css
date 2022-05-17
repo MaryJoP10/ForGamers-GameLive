@@ -23,7 +23,7 @@ body{
 }
 
 .header_content h1 {
-    font-family: var(--font-family);
+    font-family:'Times New Roman', Times, serif;
     font-weight: 800;
     font-size: 100px;
     line-height: 75px;
@@ -46,7 +46,7 @@ body{
 }
 
 .header_content h2{
-  font-family: var(--font-family);
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 28px;
@@ -57,13 +57,14 @@ body{
 }
 
 .header_content p {
-    font-family: var(--font-family);
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
     font-size: 30px;
     line-height: 28px;
     color: var(--color-text);
     color: #fff;
     margin-left: 50px;
+    margin-top: 3%;
 }
 
 .header_image {
@@ -404,4 +405,20 @@ body{
         font-size: 14px;
         line-height: 24px;
     }
+}
+
+@media screen and (max-width: 360px) {
+  .header_content h1 {
+      font-size: 35px;
+  }
+
+  .header_content h2 {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+  .header_content p {
+      font-size: 12px;
+      line-height: 24px;
+  }
 }
