@@ -1,8 +1,8 @@
-package com.shana.forgamers.entities;
+package com.shana.forgamers.models.entities;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
+@Entity //Representacion de las tablas
 @Table(name = "users")
 public class User implements Serializable {
     //Variables
