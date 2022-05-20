@@ -22,7 +22,12 @@ const Home = () => {
                     <img src={game} alt=""/>
                 </div>
             </div >
-            <div>
+            
+            <div className='about_container'>
+                
+            </div>
+
+            <div className='slide_container'>
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">

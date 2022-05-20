@@ -1,9 +1,7 @@
-/*------------------------WhatsApp--------------------------*/
-.whatsapp {
-    display:block;
-    width:70px;
-    height:70px;
-    position: fixed;
-    right:20px;
-    bottom:20px;
-  }
+.community_container{
+  height: 100vh;
+}
+
+.community_container h1{
+  color: #000;
+}

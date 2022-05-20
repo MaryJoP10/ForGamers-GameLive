@@ -6,7 +6,7 @@ const Library = () => {
     return (
         <>
             <div className='container_library'>
-
+                <h1>Library page</h1>
             </div>
             <h1>Library page</h1>
             <div className="whatsapp" >
