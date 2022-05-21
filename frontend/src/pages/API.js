@@ -13,7 +13,7 @@ const API = () => {
 
     const navigate = useNavigate();
     useEffect(() => {
-        if(!localStorage.getItem('username')){
+        if(!localStorage.getItem('user')){
             alert("Debe iniciar sesión para entrar a esta sección.");
             navigate('/signin', {replace: true});
         }
