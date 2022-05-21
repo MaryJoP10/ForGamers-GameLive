@@ -2,22 +2,30 @@ import React, { useState } from 'react';
 import wpp from '../images/wpp.png';
 import '../styles/signup.css';
 import COD from '../images/COD.png';
+import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 function Signup() {
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [user, setUser] = useState({
+        username: "",
+        email: "",
+        password: ""
+    });
+    const navigate = useNavigate();
 
-    function handleFormSubmit(e) {
+
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
-            localStorage.setItem("username", JSON.stringify(username));
-            localStorage.setItem("email", JSON.stringify(email));
-            localStorage.setItem("password", JSON.stringify(password));
-            alert("Successful Sign Up");
-            setUsername("");
-            setEmail("");
-            setPassword("");
-    }
+        
+        axios.post('http://localhost:8080/api/users/signup', user)
+          .then(function (response) {
+            if(response.data.valid){
+                localStorage.setItem("user", JSON.stringify(user));
+                alert("Successful Sign Up");
+                navigate('/signin', {replace: true});
+            }
+          });
+    };
 
     return (
         <>
@@ -29,15 +37,15 @@ function Signup() {
                             <h1>Sign Up</h1>
                             <div className='input_signup'>
                                 <div className='label'>
-                                    <input type='text' value={username} onChange={(event) => setUsername(event.target.value)} required />
+                                    <input type='text' value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })} required />
                                     <label> Username</label>
                                 </div>
                                 <div className='label'>
-                                    <input type='email' value={email} onChange={(event) => setEmail(event.target.value)} required />
+                                    <input type='email' value={user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} required />
                                     <label>Email</label>
                                 </div>
                                 <div className='label'>
-                                    <input type='password' value={password} onChange={(event) => setPassword(event.target.value)} required />
+                                    <input type='password' value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })} required />
                                     <label>Password</label>
                                 </div>
                                 <button type='submit'>Sign Up</button>

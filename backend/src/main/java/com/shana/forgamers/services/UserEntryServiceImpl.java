@@ -1,4 +1,5 @@
 package com.shana.forgamers.services;
+import com.shana.forgamers.models.DTO.ResponseDTO;
 import com.shana.forgamers.models.DTO.SignInDTO;
 import com.shana.forgamers.models.DTO.SignUpDTO;
 import com.shana.forgamers.models.entities.User;
@@ -16,21 +17,24 @@ public class UserEntryServiceImpl implements  UserEntryService{
 
     @Override
     public ResponseEntity<?> signIn(SignInDTO signInDTO) {
+        ResponseDTO response = new ResponseDTO();
         User auth = userService.findUserByUsername(signInDTO.getUsername()).orElse(null);
         if(!signInDTO.getPassword().equals(auth.getPassword())){
-            return ResponseEntity.status(HttpStatus.OK).body("Usuario o contraseña inconrrecto");
+            response.setValid(false);
+            return ResponseEntity.status(HttpStatus.OK).body(response);
         }
-
-        return ResponseEntity.status(HttpStatus.OK).body("Ha iniciado sesión");
+        response.setValid(true);
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     @Override
     public ResponseEntity<?> signUp(SignUpDTO signUpDTO) {
-
+        ResponseDTO response = new ResponseDTO();
         if (Boolean.TRUE.equals(userService.existsUserByUsername(signUpDTO.getUsername()))) {
-            return ResponseEntity.status(HttpStatus.OK).body("El usuario no esta disponible.");
+            response.setValid(false);
+            return ResponseEntity.status(HttpStatus.OK).body(response);
         }
-
+        response.setValid(true);
         User user = new User();
 
         user.setUsername(signUpDTO.getUsername());
@@ -38,6 +42,6 @@ public class UserEntryServiceImpl implements  UserEntryService{
         user.setPassword(signUpDTO.getPassword());
 
         userService.saveUser(user);
-        return ResponseEntity.status(HttpStatus.OK).body("");
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 }

@@ -6,6 +6,7 @@ import logo from '../../images/logo.png';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  
   return (
     <>
       <Nav>
@@ -30,6 +31,7 @@ const Navbar = () => {
             </NavLink>
           </div>
         </div>
+        {!localStorage.getItem("user") ? 
         <div className="register">
           <NavLink to="/signin">
             <h1>Sign In</h1>
@@ -37,8 +39,7 @@ const Navbar = () => {
           <NavLink to="/signup">
             <button>Sign Up</button>
           </NavLink>
-
-        </div>
+        </div>:<div></div>}
         <div className="responsive">
           {toggleMenu
             ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggleMenu(false)} width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -68,6 +69,7 @@ const Navbar = () => {
                   <h1>API</h1>
                 </NavLink>
               </div>
+              {!localStorage.getItem("user") ?
               <div className="registerResponsive">
                 <NavLink to="/signin">
                   <h1>Sign In</h1>
@@ -76,6 +78,7 @@ const Navbar = () => {
                   <button>Sign Up</button>
                 </NavLink>
               </div>
+              : <div></div>}
             </div>
           )}
         </div>

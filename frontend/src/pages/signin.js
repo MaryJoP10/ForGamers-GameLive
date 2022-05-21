@@ -2,29 +2,33 @@ import React, { useState } from 'react';
 import wpp from '../images/wpp.png';
 import crash from '../images/crash.png';
 import '../styles/signin.css';
+import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 function Signin() {
-    const [usernamelog, setUsernamelog] = useState("");
-    const [passwordlog, setPasswordlog] = useState("");
+    const [userlog, setUserlog] = useState({
+        username: "",
+        password: ""
+    });
+    const navigate = useNavigate();
 
-    function handleLogin(e) {
+
+    const handleLogin = async (e) => {
         e.preventDefault();
-        let pass = localStorage
-            .getItem("password")
-            .replace(/"/g, "");
-        let user = localStorage.getItem("username").replace(/"/g, "");
+        
+        axios.post('http://localhost:8080/api/users/signin', userlog)
+          .then(function (response) {
+            if(response.data.valid){
+                alert("Successful Sign Up");
+                navigate('/', {replace: true});
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    };
 
 
-        if (!usernamelog || !passwordlog) {
-            alert("Enter your username and password to login");
-        } else if (passwordlog !== pass || usernamelog !== user) {
-            alert("Wrong password or username")
-        } else {
-            alert("Successful Login")
-            setUsernamelog("");
-            setPasswordlog("");
-        }
-    }
     return (
         <>
             <div className='signin_page'>
@@ -34,11 +38,11 @@ function Signin() {
                             <h1>Sign In</h1>
                             <div className='input_signin'>
                                 <div className='label'>
-                                    <input type='text' value={usernamelog} onChange={(event) => setUsernamelog(event.target.value)} required />
+                                    <input type='text' value={userlog.username} onChange={(e) => setUserlog({ ...userlog, username: e.target.value })} required />
                                     <label> Username</label>
                                 </div>
                                 <div className='label'>
-                                    <input type='password' value={passwordlog} onChange={(event) => setPasswordlog(event.target.value)} required />
+                                    <input type='password' value={userlog.password} onChange={(e) => setUserlog({ ...userlog, password: e.target.value })} required />
                                     <label>Password</label>
                                 </div>
                                 <button type='submit'>Sign In</button>
