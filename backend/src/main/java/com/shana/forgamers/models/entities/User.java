@@ -8,16 +8,19 @@ public class User implements Serializable {
     //Variables
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_user;
+    @Column(name = "iduser")
+    private Integer idUser;
 
-    @Column(length = 100)
+    @Column(name = "username", length = 100)
     private String username;
+    @Column(name = "email", length = 100)
     private String email;
+    @Column(name = "password", length = 100)
     private String password;
 
     //Getters
     public Integer getId_user() {
-        return id_user;
+        return idUser;
     }
     public String getUsername() {
         return username;
@@ -31,7 +34,7 @@ public class User implements Serializable {
 
     //Setters
     public void setId_user(Integer id_user) {
-        this.id_user = id_user;
+        this.idUser = id_user;
     }
     public void setUsername(String username) {
         this.username = username;
