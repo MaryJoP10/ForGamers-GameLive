@@ -10,9 +10,10 @@ Clonar repositorio
 
 Correr Backend
 
-Correr Frontend 
+Correr Frontend {
 
   npm install
   
   npm start
   
+  }
