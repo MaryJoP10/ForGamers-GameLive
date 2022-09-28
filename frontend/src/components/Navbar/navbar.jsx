@@ -27,7 +27,7 @@ const Navbar = () => {
               <h1>Chat</h1>
             </NavLink>
             <NavLink to="/api">
-              <h1>API</h1>
+              <h1>Test APIs</h1>
             </NavLink>
           </div>
         </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
                   <h1>Chat</h1>
                 </NavLink>
                 <NavLink to="/api">
-                  <h1>API</h1>
+                  <h1>Test APIs</h1>
                 </NavLink>
               </div>
               {!localStorage.getItem("user") ?
