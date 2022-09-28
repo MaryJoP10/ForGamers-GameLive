@@ -1,16 +1,9 @@
 # ForGamers
+Clone repository
 
-Plantilla totalmente propia, sin referencia. 
+Run Backend
 
-Equipo: María José Peña Ruiz
-
-# Para correr
-
-Clonar repositorio
-
-Correr Backend
-
-Correr Frontend {
+Run Frontend {
 
   npm install
   
